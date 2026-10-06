@@ -107,16 +107,17 @@
   <section class="block wrap" id="papers">
     <h2>Papers and preprints</h2>
     <ol class="papers" reversed>
-      <!--
+      <!-- Hidden for now. To show it, delete this line and the "end hidden" line below.
+           Once it is on arXiv, change "In prep." to the year and add the link like the papers below.
       <li>
         <span class="when">In prep.</span>
         <div>
           <p class="title">A local limit theorem for functionals of periodic diffusions conditioned to stay positive</p>
           <p class="authors"><b>A. Arellano-Arias</b></p>
-          <!-- TODO: add the arXiv link once posted -->
         </div>
       </li>
-      -->
+      end hidden -->
+
       <li>
         <span class="when">2026</span>
         <div>
@@ -169,6 +170,37 @@
   <!-- ============ COMPUTATION ============ -->
   <section class="block wrap" id="code">
     <h2>Computation and code</h2>
+
+    <!-- Simulation player. The frames and the list of times are set in simulation.js -->
+    <figure class="sim" id="sim" aria-labelledby="sim-caption">
+      <div class="sim-switch" role="group" aria-label="Environment"></div>
+      <div class="sim-panels">
+        <div class="sim-panel">
+          <p class="sim-label">Particles</p>
+          <div class="sim-frames" data-track="particles"></div>
+        </div>
+        <div class="sim-panel">
+          <p class="sim-label">Density</p>
+          <div class="sim-frames" data-track="density"></div>
+        </div>
+      </div>
+      <div class="sim-controls">
+        <button type="button" class="sim-play" aria-label="Play the animation">Play</button>
+        <input type="range" class="sim-slider" min="0" max="9" step="1" value="0" aria-label="Time">
+        <output class="sim-time" aria-live="off">T = 1.8</output>
+      </div>
+      <div class="sim-env" hidden>
+        <img src="" alt="">
+        <p></p>
+      </div>
+      <figcaption id="sim-caption">
+        Branching Brownian motion in the plane, started from a single particle,
+        in a homogeneous and in a periodic environment. Left, the position of
+        every particle; right, the density of the same population. Drag the
+        slider to stop at any time.
+      </figcaption>
+    </figure>
+
     <ul class="entries">
       <li>
         <span class="when">2023–25</span>
@@ -306,5 +338,6 @@
 </footer>
 
 <script src="figure.js"></script>
+<script src="simulation.js"></script>
 </body>
 </html>
