@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arturo Arellano-Arias</title>
+  <meta name="description" content="Arturo Arellano-Arias, Ph.D. candidate in Mathematics at McGill University. Probability, branching processes and interacting particle systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;1,7..72,400&family=Public+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="wordmark" href="#top">A. Arellano-Arias</a>
+    <nav aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#papers">Papers</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#contact">Contact</a>
+      <!-- TODO: put your academic CV in this folder as cv.pdf -->
+      <a class="cv-link" href="cv.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ INTRO ============ -->
+  <section class="intro wrap" id="top">
+    <div class="intro-text">
+      <h1>Arturo Arellano-Arias</h1>
+      <p class="role">
+        Ph.D. candidate in Mathematics<br>
+        Department of Mathematics and Statistics, McGill University
+        <!-- TODO: add your advisor, e.g. "Advisor: ..." -->
+        <br><span class="todo">Advisor: add name</span>
+      </p>
+      <p class="lede">
+        I am a probabilist working on branching processes and interacting
+        particle systems in inhomogeneous environments. I expect to complete
+        my Ph.D. in summer 2027 and am applying for postdoctoral positions
+        starting in fall 2027.
+      </p>
+      <ul class="links" aria-label="Profiles">
+        <li><a href="mailto:arturo.arellanoarias@mail.mcgill.ca">Email</a></li>
+        <li><a href="https://arxiv.org/search/?searchtype=author&amp;query=Arellano-Arias">arXiv</a></li>
+        <li><a href="https://github.com/ArturoAA95">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/arturoaa/">LinkedIn</a></li>
+        <!-- TODO (optional): Google Scholar, ORCID
+        <li><a href="https://scholar.google.com/citations?user=...">Google Scholar</a></li>
+        <li><a href="https://orcid.org/...">ORCID</a></li>
+        -->
+      </ul>
+    </div>
+
+    <!-- Photo: save your picture as images/photo.jpg and it will appear here.
+         Until then, your initials are shown. -->
+    <div class="portrait">
+      <span aria-hidden="true">AA</span>
+      <img src="images/photo.jpg" alt="Portrait of Arturo Arellano-Arias" onerror="this.remove()">
+    </div>
+  </section>
+
+  <!-- ============ FIGURE ============ -->
+  <figure class="bbm wrap" aria-labelledby="bbm-caption">
+    <svg id="bbm" viewBox="0 0 1000 240" preserveAspectRatio="xMidYMid slice" role="img"
+         aria-label="Simulated branching Brownian motion spreading out from a single particle across horizontal bands that represent a periodic environment."></svg>
+    <figcaption id="bbm-caption">
+      Branching Brownian motion in a periodic environment, simulated from one
+      particle. Time runs left to right; particles branch faster in the shaded
+      bands. Its spread is the subject of my shape theorems.
+    </figcaption>
+  </figure>
+
+  <!-- ============ RESEARCH ============ -->
+  <section class="block wrap" id="research">
+    <h2>Research</h2>
+    <div class="prose">
+      <p>
+        My research is in probability theory. I study how spatial
+        inhomogeneity shapes the long-time behaviour of random systems:
+        branching Brownian motion and branching diffusions in periodic
+        environments, diffusions conditioned to stay positive, and scaling
+        limits of interacting particle systems of Smoluchowski type.
+      </p>
+      <p>
+        A recurring question is how fast, and in what shape, a branching
+        population spreads when the medium varies in space. With L.
+        Addario-Berry and J. Lin, I proved a shape theorem for branching
+        Brownian motion in a periodic environment, and I have since proved a
+        shape theorem for periodic branching diffusions.
+      </p>
+      <p>
+        I pair proofs with computation. I test theoretical predictions
+        against large Monte Carlo simulations and numerical PDE solvers,
+        written in Python and released as open-source code.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ PAPERS ============ -->
+  <section class="block wrap" id="papers">
+    <h2>Papers and preprints</h2>
+    <ol class="papers" reversed>
+      <li>
+        <span class="when">In prep.</span>
+        <div>
+          <p class="title">A local limit theorem for functionals of periodic diffusions conditioned to stay positive</p>
+          <p class="authors"><b>A. Arellano-Arias</b></p>
+          <!-- TODO: add the arXiv link once posted -->
+        </div>
+      </li>
+      <li>
+        <span class="when">2026</span>
+        <div>
+          <p class="title"><a href="https://arxiv.org/abs/2608.17031">A shape theorem for periodic branching diffusion</a></p>
+          <p class="authors"><b>A. Arellano-Arias</b></p>
+          <p class="venue">arXiv:2608.17031</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2026</span>
+        <div>
+          <p class="title"><a href="https://arxiv.org/abs/2603.25868">Scaling limit of Smoluchowski particles</a></p>
+          <p class="authors">J. Amorim, <b>A. Arellano-Arias</b>, M. Jara</p>
+          <p class="venue">arXiv:2603.25868</p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2025</span>
+        <div>
+          <p class="title"><a href="https://arxiv.org/abs/2507.10515">A shape theorem for BBM in a periodic environment</a></p>
+          <p class="authors">L. Addario-Berry, <b>A. Arellano-Arias</b>, J. Lin</p>
+          <p class="venue">arXiv:2507.10515
+            &nbsp;<a class="aside" href="https://github.com/ArturoAA95/Het_BBM">code</a>
+            &nbsp;<a class="aside" href="https://drive.google.com/drive/folders/1yM0S1xD95CJmnyEbZli5JLzeAeNxFafU?usp=sharing">slides</a>
+          </p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ TALKS ============ -->
+  <!-- TODO: list your talks (seminars, conferences). Copy one <li> per talk.
+       Delete the "todo" line once you add real entries. -->
+  <section class="block wrap" id="talks">
+    <h2>Talks</h2>
+    <ul class="entries">
+      <li class="todo">Add talks here: title, venue, city, month and year.</li>
+      <!--
+      <li>
+        <span class="when">2026</span>
+        <div>
+          <p class="title">A shape theorem for BBM in a periodic environment</p>
+          <p class="meta">Probability Seminar, University of ..., City</p>
+        </div>
+      </li>
+      -->
+    </ul>
+  </section>
+
+  <!-- ============ COMPUTATION ============ -->
+  <section class="block wrap" id="code">
+    <h2>Computation and code</h2>
+    <ul class="entries">
+      <li>
+        <span class="when">2023–25</span>
+        <div>
+          <p class="title">Monte Carlo validation of front speeds for branching populations</p>
+          <p class="meta">
+            Simulations of a branching particle system with millions of
+            particles, comparing Monte Carlo estimates of the front and cloud
+            velocity with numerical PDE solutions. Filtering non-informative
+            particles kept the cost under control at long time horizons.
+          </p>
+          <p class="venue">
+            <a href="https://github.com/ArturoAA95/Het_BBM">Repository</a>
+            &nbsp;<a href="https://arxiv.org/abs/2507.10515">Paper</a>
+            &nbsp;<a href="https://drive.google.com/drive/folders/1yM0S1xD95CJmnyEbZli5JLzeAeNxFafU?usp=sharing">Slides</a>
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2020–21</span>
+        <div>
+          <p class="title">An iterative scheme for a nonlinear transmission problem</p>
+          <p class="meta">
+            Master's project at CIMAT. An iterative numerical method for a
+            nonlinear PDE, tested on 18 two-dimensional cases on 250×250
+            grids and checked against Monte Carlo simulation.
+          </p>
+          <p class="venue">
+            <a href="https://github.com/ArturoAA95/TransmisionProblem">Repository</a>
+            &nbsp;<a href="https://drive.google.com/drive/folders/1ap1VIY0AXb9cWkxO0xri7iQM2n9fqTa6?usp=sharing">Notes</a>
+            &nbsp;<a href="https://www.youtube.com/watch?v=tzz6OqeH77w">Video</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ TEACHING ============ -->
+  <section class="block wrap" id="teaching">
+    <h2>Teaching and mentoring</h2>
+    <ul class="entries">
+      <li>
+        <span class="when">McGill</span>
+        <div>
+          <p class="title">Lead instructor, Introduction to Statistics</p>
+          <p class="meta">
+            Sole instructor for a class of more than 90 students from the
+            social sciences, health sciences and STEM. Designed the syllabus,
+            lectures, assignments and exams.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="when">McGill</span>
+        <div>
+          <p class="title">Teaching assistant</p>
+          <p class="meta">
+            Six courses, more than 420 students in total: Calculus, Ordinary
+            Differential Equations, Probability, Stochastic Processes.
+            Designed and led problem-solving sessions.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2022–23</span>
+        <div>
+          <p class="title">Mentor, Directed Reading Program</p>
+          <p class="meta">
+            Supervised two undergraduates through semester-long reading
+            projects, which produced coding projects
+            (<a href="https://colab.research.google.com/drive/1KWLy6MGxcAYDtaJunq-X5v6ksNBPBLm5?usp=sharing">1</a>,
+            <a href="https://colab.research.google.com/drive/1tSLYoob01MmoMFaBM0VfMyUqFiLpX7Ay?usp=sharing">2</a>,
+            <a href="https://colab.research.google.com/drive/15ku250bvMZ4nirX65-5qV-tPKCEoya3E?usp=sharing">3</a>),
+            an <a href="https://www.math.mcgill.ca/gsams/drp/papers/papers2024/Hugo-Belzil.pdf">expository paper</a>
+            and a final presentation.
+          </p>
+        </div>
+      </li>
+      <li>
+        <span class="when">2013–20</span>
+        <div>
+          <p class="title">Coach, Mexican Mathematical Olympiad</p>
+          <p class="meta">
+            Coached more than 100 students for state and national competitions
+            at CIMAT, including many from underrepresented regions; several
+            have gone on to careers in STEM.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ AWARDS + EDUCATION ============ -->
+  <div class="pair wrap">
+    <section class="block" id="awards">
+      <h2>Awards and funding</h2>
+      <ul class="plain">
+        <li>FRQNT doctoral research scholarship, CAD 91,667</li>
+        <li>Mitacs Globalink Research Award, CAD 6,000</li>
+        <li>Gold medal, Mexican Mathematical Olympiad</li>
+      </ul>
+    </section>
+
+    <section class="block" id="education">
+      <h2>Education</h2>
+      <ul class="plain">
+        <li><b>Ph.D. in Mathematics</b>, McGill University, 2021–2027 (expected)</li>
+        <li><b>M.Sc. in Applied Mathematics</b>, CIMAT, Mexico, 2019–2021</li>
+        <li><b>B.Sc. in Mathematics</b>, Universidad de Guanajuato, 2014–2019</li>
+      </ul>
+    </section>
+  </div>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="block wrap" id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>
+        <a href="mailto:arturo.arellanoarias@mail.mcgill.ca">arturo.arellanoarias@mail.mcgill.ca</a>
+      </p>
+      <address>
+        Department of Mathematics and Statistics<br>
+        McGill University, Burnside Hall<br>
+        805 Sherbrooke Street West<br>
+        Montréal, QC H3A 0B9, Canada
+      </address>
+      <p class="meta">Languages: Spanish (native), English (fluent), French (basic).</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap footer">
+  <p>Last updated October 2026.</p>
+</footer>
+
+<script src="figure.js"></script>
+</body>
+</html>
