@@ -11,13 +11,6 @@
 // automatically above the player.
 const SEQUENCES = [
   {
-    id: "homogeneous",
-    label: "Homogeneous environment",
-    folder: "sims/homogeneous",
-    ext: "webp",
-    times: [1.8, 3.6, 5.4, 7.2, 9, 10.8, 12.6, 14.4, 16.2, 18],
-  },
-  {
     id: "heterogeneous",
     label: "Periodic environment",
     folder: "sims/heterogeneous",
@@ -29,6 +22,13 @@ const SEQUENCES = [
       alt: "The environment g: vertical stripes alternating between 0 and 1, each of width 1.",
       note: "The environment g alternates between 0 and 1 in vertical stripes of width 1. The density picks up the same stripes as the population grows.",
     },
+  },
+  {
+    id: "homogeneous",
+    label: "Homogeneous environment",
+    folder: "sims/homogeneous",
+    ext: "webp",
+    times: [1.8, 3.6, 5.4, 7.2, 9, 10.8, 12.6, 14.4, 16.2, 18],
   },
 ];
 
