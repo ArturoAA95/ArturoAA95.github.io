@@ -51,20 +51,33 @@ const SEQUENCES = [
   const env = root.querySelector(".sim-env");
 
   let seq = null, frame = 0, playing = false, timer = null, visible = false;
+  let ready = false, wantPlay = false;
+
+  // Build the frames of every sequence once, as soon as the page opens, so they
+  // download and decode in the background. A sequence only plays once all of its
+  // frames are decoded; this avoids blank or flickering frames on the first run.
+  const built = new Map();
+  for (const s of SEQUENCES) {
+    const imgs = { particles: [], density: [] };
+    for (const kind of ["particles", "density"]) {
+      s.times.forEach((t, i) => {
+        const img = new Image();
+        img.alt = `${kind === "particles" ? "Particle positions" : "Particle density"} at time T = ${t}`;
+        img.src = `${s.folder}/${kind}-${String(i + 1).padStart(2, "0")}.${s.ext || "webp"}`;
+        imgs[kind].push(img);
+      });
+    }
+    const all = [...imgs.particles, ...imgs.density];
+    if (s.environment) { const e = new Image(); e.src = s.environment.src; all.push(e); }
+    const done = Promise.all(all.map((img) => img.decode().catch(() => {})));
+    built.set(s.id, { imgs, done });
+  }
 
   function load(s) {
     seq = s;
-    for (const kind of ["particles", "density"]) {
-      const box = tracks[kind];
-      box.replaceChildren();
-      s.times.forEach((t, i) => {
-        const img = document.createElement("img");
-        img.src = `${s.folder}/${kind}-${String(i + 1).padStart(2, "0")}.${s.ext || "webp"}`;
-        img.alt = `${kind === "particles" ? "Particle positions" : "Particle density"} at time T = ${t}`;
-        img.decoding = "async";
-        box.appendChild(img);
-      });
-    }
+    const b = built.get(s.id);
+    tracks.particles.replaceChildren(...b.imgs.particles);
+    tracks.density.replaceChildren(...b.imgs.density);
     slider.max = s.times.length - 1;
 
     // Environment picture and note, if this sequence has one.
@@ -77,6 +90,17 @@ const SEQUENCES = [
       }
     }
     show(0);
+
+    ready = false;
+    button.disabled = true;
+    button.textContent = "Loading…";
+    b.done.then(() => {
+      if (seq !== s) return;            // the visitor switched again meanwhile
+      ready = true;
+      button.disabled = false;
+      button.textContent = "Play";
+      if (wantPlay) { wantPlay = false; play(); }
+    });
   }
 
   function show(i) {
@@ -95,6 +119,7 @@ const SEQUENCES = [
   }
 
   function play() {
+    if (!ready) { wantPlay = true; return; }   // starts as soon as the frames are ready
     if (playing) return;
     playing = true;
     button.textContent = "Pause";
@@ -104,8 +129,10 @@ const SEQUENCES = [
   }
 
   function pause() {
+    wantPlay = false;
     playing = false;
     clearTimeout(timer);
+    if (!ready) return;
     button.textContent = "Play";
     button.setAttribute("aria-label", "Play the animation");
   }
@@ -125,7 +152,7 @@ const SEQUENCES = [
       b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
       b.addEventListener("click", () => {
         switcher.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", x === b ? "true" : "false"));
-        const wasPlaying = playing;
+        const wasPlaying = playing || wantPlay;
         pause();
         load(s);
         if (wasPlaying) play();
