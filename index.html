@@ -84,26 +84,42 @@
   <section class="block wrap" id="research">
     <h2>Research</h2>
     <div class="prose">
-      <p>
-        My research is in probability theory. I study how spatial
-        inhomogeneity shapes the long-time behaviour of random systems:
-        branching Brownian motion and branching diffusions in periodic
-        environments, diffusions conditioned to stay positive, and scaling
-        limits of interacting particle systems of Smoluchowski type.
-      </p>
-      <p>
-        A recurring question is how fast, and in what shape, a branching
-        population spreads when the medium varies in space. With L.
-        Addario-Berry and J. Lin, I proved a shape theorem for branching
-        Brownian motion in a periodic environment, and I have since proved a
-        shape theorem for periodic branching diffusions.
-      </p>
-      <p>
-        I pair proofs with computation. I test theoretical predictions
-        against large Monte Carlo simulations and numerical PDE solvers,
-        written in Python and released as open-source code.
-      </p>
-    </div>
+  <p>
+    I am interested in problems at the intersection of probability and partial
+    differential equations: random systems whose large-scale behaviour is
+    described by a PDE, and PDEs whose solutions have a probabilistic
+    representation. Each of my projects is built on such a connection.
+  </p>
+  <p>
+    Branching Brownian motion is dual to the Fisher–KPP equation: by McKean's
+    representation, the law of the rightmost particle solves the equation.
+    When the branching rate varies periodically in space, the equation
+    inherits a periodic reaction term, and the question becomes how fast, and
+    in what shape, the population spreads. With L. Addario-Berry and J. Lin,
+    I proved a shape theorem for branching Brownian motion in a periodic
+    environment, and I have since proved a shape theorem for periodic
+    branching diffusions.
+  </p>
+  <p>
+    In the other direction, PDEs arise as limits of particle systems. With
+    J. Amorim and M. Jara, I studied a system of interacting particles whose
+    hydrodynamic limit is the Smoluchowski equation: as the number of
+    particles tends to infinity and space and time are suitably rescaled,
+    the empirical density converges to its solution.
+  </p>
+  <p>
+    I have also worked on a nonlinear PDE coming from a stochastic game that
+    combines Brownian motion in one part of the domain with controlled
+    deterministic motion in the other. Its value function solves a
+    transmission problem coupling an elliptic equation with an eikonal
+    equation across an interface; I developed an iterative numerical scheme
+    for it and checked it against Monte Carlo simulation of the game.
+  </p>
+  <p>
+    Alongside proofs, I write simulation code to explore and test the theory,
+    and release it as open source.
+  </p>
+</div>
   </section>
 
   <!-- ============ PAPERS ============ -->
