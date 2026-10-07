@@ -38,7 +38,7 @@
         Ph.D. candidate in Mathematics<br>
         Department of Mathematics and Statistics, McGill University
         <!-- TODO: add your advisor, e.g. "Advisor: ..." -->
-        <br><span class="todo">Advisors: Jessica Lin and Louigi Addario-Berry</span>
+        <br><span class="todo">Advisor: add name</span>
       </p>
       <p class="lede">
         I am a probabilist working on branching processes and interacting
@@ -170,37 +170,6 @@
   <!-- ============ COMPUTATION ============ -->
   <section class="block wrap" id="code">
     <h2>Computation and code</h2>
-
-    <!-- Simulation player. The frames and the list of times are set in simulation.js -->
-    <figure class="sim" id="sim" aria-labelledby="sim-caption">
-      <div class="sim-switch" role="group" aria-label="Environment"></div>
-      <div class="sim-panels">
-        <div class="sim-panel">
-          <p class="sim-label">Particles</p>
-          <div class="sim-frames" data-track="particles"></div>
-        </div>
-        <div class="sim-panel">
-          <p class="sim-label">Density</p>
-          <div class="sim-frames" data-track="density"></div>
-        </div>
-      </div>
-      <div class="sim-controls">
-        <button type="button" class="sim-play" aria-label="Play the animation">Play</button>
-        <input type="range" class="sim-slider" min="0" max="9" step="1" value="0" aria-label="Time">
-        <output class="sim-time" aria-live="off">T = 1.8</output>
-      </div>
-      <div class="sim-env" hidden>
-        <img src="" alt="">
-        <p></p>
-      </div>
-      <figcaption id="sim-caption">
-        Branching Brownian motion in the plane, started from a single particle,
-        in a homogeneous and in a periodic environment. Left, the position of
-        every particle; right, the density of the same population. Drag the
-        slider to stop at any time.
-      </figcaption>
-    </figure>
-
     <ul class="entries">
       <li>
         <span class="when">2023–25</span>
@@ -217,6 +186,36 @@
             &nbsp;<a href="https://arxiv.org/abs/2507.10515">Paper</a>
             &nbsp;<a href="https://drive.google.com/drive/folders/1yM0S1xD95CJmnyEbZli5JLzeAeNxFafU?usp=sharing">Slides</a>
           </p>
+
+          <!-- Simulation player. The frames and the list of times are set in simulation.js -->
+          <figure class="sim" id="sim" aria-labelledby="sim-caption">
+            <div class="sim-switch" role="group" aria-label="Environment"></div>
+            <div class="sim-panels">
+              <div class="sim-panel">
+                <p class="sim-label">Particles</p>
+                <div class="sim-frames" data-track="particles"></div>
+              </div>
+              <div class="sim-panel">
+                <p class="sim-label">Density</p>
+                <div class="sim-frames" data-track="density"></div>
+              </div>
+            </div>
+            <div class="sim-controls">
+              <button type="button" class="sim-play" aria-label="Play the animation">Play</button>
+              <input type="range" class="sim-slider" min="0" max="9" step="1" value="0" aria-label="Time">
+              <output class="sim-time" aria-live="off">T = 1.8</output>
+            </div>
+            <div class="sim-env" hidden>
+              <img src="" alt="">
+              <p></p>
+            </div>
+            <figcaption id="sim-caption">
+              Branching Brownian motion in the plane, started from a single particle,
+              in a homogeneous and in a periodic environment. Left, the position of
+              every particle; right, the density of the same population. Drag the
+              slider to stop at any time.
+            </figcaption>
+          </figure>
         </div>
       </li>
       <li>
@@ -233,6 +232,28 @@
             &nbsp;<a href="https://drive.google.com/drive/folders/1ap1VIY0AXb9cWkxO0xri7iQM2n9fqTa6?usp=sharing">Notes</a>
             &nbsp;<a href="https://www.youtube.com/watch?v=tzz6OqeH77w">Video</a>
           </p>
+
+          <!-- Test-case viewer. The list of cases is set in cases.js -->
+          <figure class="cases" id="cases" aria-labelledby="cases-caption">
+            <div class="cases-pick"></div>
+            <div class="cases-panels">
+              <div>
+                <p class="sim-label">Domain</p>
+                <a class="cases-frame" data-panel="domain" target="_blank" rel="noopener"><img alt=""></a>
+              </div>
+              <div>
+                <p class="sim-label">Solution</p>
+                <a class="cases-frame" data-panel="solution" target="_blank" rel="noopener"><img alt=""></a>
+              </div>
+            </div>
+            <figcaption id="cases-caption">
+              <span class="cases-name"></span>
+              Each domain is split into an eikonal region and a Brownian region,
+              separated by an interface; purple marks the boundary region. The
+              solution is shown with its level curves and the interface in blue.
+              Pick a test case above; click a picture to open it full size.
+            </figcaption>
+          </figure>
         </div>
       </li>
     </ul>
@@ -339,5 +360,6 @@
 
 <script src="figure.js"></script>
 <script src="simulation.js"></script>
+<script src="cases.js"></script>
 </body>
 </html>
